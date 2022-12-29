@@ -1,0 +1,418 @@
+// global
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+// header
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+nav {
+
+  .container {
+      font-family: 'Fira Sans';
+
+      .logo {
+
+          display: flex;
+          color: #000;
+          align-items: center;
+          margin-right: 261px;
+          font-weight: 600;
+          gap: 11px;
+
+          @media (max-width: 768px) {
+              margin-right: 0;
+          }
+
+          @media (width: 1024px) {
+              margin-right: 168.5px;
+          }
+
+          @media (width: 1440px) {
+              margin-right: 351px;
+          }
+
+              .logo_text {
+
+                  display: flex;
+                  gap: 0;
+
+                  .job {
+                      color:#1A75E8;
+                  }
+              }
+          }
+        
+        .navbar-collapse {
+          flex-grow: unset;
+        }
+
+      .menu_list {
+
+          display: flex;
+          padding: 0;
+          margin-right: 261px;
+          margin-bottom: 0;
+          gap: 20px;
+
+          @media (max-width: 768px) {
+              margin-right: 0;
+          }
+
+          @media (width: 1024px) {
+              margin-right: 168.5px;
+          }
+
+          @media (width: 1440px) {
+              margin-right: 351px;
+          }
+
+          li {
+              display: inline-block;          
+          }
+      }
+  }
+
+  .email {
+
+      display: flex;
+      gap: 60px;
+
+      a {
+          padding-top: 15px;
+          padding-bottom: 15px;
+      }
+
+      .registration {
+          
+          color: white;
+          text-align: center;
+          background: #1A75E8;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          border-radius: 5px;
+          padding-left: 30px;
+          padding-right: 30px;
+      }
+  }  
+}
+// category
+.category{
+    margin: 80px auto 80px;
+
+    @media(max-width: 768px){
+        .row{
+            flex-direction: column;
+            align-items: center;
+        }
+        h3{
+            text-align: center;
+        }
+    }
+    &_btn{
+        width: calc( (100% / 6) - (332px / 6));
+        height: 128px;
+        border-radius: 10px;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: background .3s, color .3s;
+        cursor: pointer;
+        @media (max-width: 768px) {
+          width: 166px;
+        }
+
+        &:hover{
+            background: #1A75E8;
+
+            path{
+                fill: #fff;
+            }
+            & a{
+                color: white;
+            }
+        }
+    }
+    h3{
+        margin: 1px auto 40px;
+        font-family: 'Fira Sans';
+        font-weight: 700;
+        font-size: 24px;
+    }
+    a{
+        font-family: 'Fira Sans';
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: #111238;
+    }
+}
+.group-req {
+  padding-left: 15px;
+  color: #b2b2b2;
+  font-size: 14px;
+  line-height: 17px;
+}
+.tag {
+  color: #b2b2b2;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  border: 1px solid #b2b2b2;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+.tag:hover{
+  background: #1A75E8;
+border-radius: 5px;
+color: #fff;
+}
+.section {
+  padding-top: 70px;
+  padding-bottom: 80px;
+}
+.section-title {
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+
+.vacancy {
+border: 1px solid #c5c9d5;
+border-radius: 10px;
+padding: 30px;
+margin-bottom: 20px;
+}
+
+.vacancy-title {
+margin-left: 20px;
+}
+.vacancy-header {
+font-size: 16px;
+line-height: 19px;
+margin-bottom: 10px;
+margin-top: 0;
+color: #111238;
+}
+.vacancy-place {
+font-size: 14px;
+line-height: 17px;
+}
+.vacancy-salary {
+margin-left: 46px;
+margin-right: 62px;
+padding: 10px 25px;
+
+background: #1A75E8;
+border-radius: 5px;
+font-family: 'Fira Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+color: #FFFFFF;
+text-decoration: none;
+
+}
+.vacancy-salary:hover{
+text-decoration: underline;
+}
+.more {
+font-size: 14px;
+line-height: 17px;
+color: #1a75e8;
+text-decoration: none;
+margin-left: auto;
+margin-right: 25px;
+}
+.more:hover{
+text-decoration: underline;
+}
+.more-vacancy{
+color: #fff;
+background: #1A75E8;
+border-radius: 5px;
+padding: 15px 30px;
+text-decoration: none;
+margin: 0 auto;
+}
+
+.more-vacancy:hover{
+text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+.vacancy-salary {
+  margin-left: 30px;
+  margin-right: 30px;
+  }
+.more {
+  margin-right: 0;
+}
+}
+@media (max-width: 992px) {
+.more {
+  margin-left: auto;
+  margin-right: auto;
+}
+.vacancy-title {
+  text-align: center;
+  margin-left: 0;
+}
+.tag {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+}
+@media (max-width: 768px) {
+.req {
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.vacancy-title {
+  text-align: center;
+}
+}
+
+.subs {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fira Sans';
+    background: #F2F3F6;
+    height: 446px;
+
+    @media (max-width: 425px) {
+        padding: 70px 15px; 
+        height: 620px;
+        width: 100vw;
+    }
+
+    .block {
+        
+        width: 460px;
+        height: 277px;
+
+        @media (max-width: 425px) {
+            height: 300px;            
+        }
+ 
+        h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 900;
+            font-size: 36px;
+        }
+
+        p {
+            text-align: center;
+            font-weight: 400;
+            font-size: 18px;
+            margin-bottom: 40px;
+        } 
+           
+        .sub {
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;            
+            background: #FFFFFF;
+            border: 1px solid rgba(209, 209, 209, 0.1);
+            box-shadow: 0px 4px 25px rgba(15, 17, 56, 0.1);
+            border-radius: 5px;
+            width: 447px;
+            height: 70px;
+            margin: 0;
+            padding-right: 10px;
+            padding-left: 25px;
+
+            @media (max-width: 425px) {
+                width: 290px;
+                height: 70px;
+                margin: 0 auto;
+            }
+                        
+            input {
+                border: 0;
+
+                @media (max-width: 425px) {
+                    width: 150px;                    
+                }
+            }
+    
+            .btn {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                gap: 10px;
+                padding: 15px 30px;  
+                background: #1A75E8;
+                border-color: #1A75E8;
+                border-radius: 5px; 
+                color: #FFFFFf;
+
+                a {
+                    @media (max-width: 425px) {
+                        display: none;                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer{
+    margin: 70px auto 64px;
+
+    @media(max-width: 768px){
+        .row{
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+    &_info{
+        h4{
+            padding-top: 35px;
+            padding-bottom: 70px;
+        }
+        p{
+            font-family: 'Fira Sans';
+            font-weight: 400;
+            font-size: 12px;
+            opacity: 0.5;
+        }
+    }
+    &_menu{
+        h4{
+            font-family: 'Fira Sans';
+            font-weight: 700;
+            font-size: 16px;
+            color: #111238;
+        }
+        a{
+            font-family: 'Fira Sans';
+            font-weight: 400;
+            font-size: 16px;
+            color: #111238;
+            text-decoration: none;
+            transition: 0.3s;
+
+            &:hover{
+                color: #1A75E8;
+            }
+        }
+    }
+}
+
